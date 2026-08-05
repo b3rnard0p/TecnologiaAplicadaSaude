@@ -1,0 +1,27 @@
+Nome:
+	Sistema para Monitoramento Remoto de Sinais Vitais Utilizando ESP32
+
+Curso:
+	Ciência da Computação
+
+Nomes:
+	Anderson Ribeiro Ribas e Alessandro André Mainardi de Oliveira
+
+Link:
+	https://tcconline.lapinf.ufn.edu.br/media/midias/AndersonRibeiroRibas.pdf
+
+Resumo:
+	A importância da saúde em contraste com o cenário crítico
+	gerado pela COVID-19 exige a concepção de soluções adequadas à
+	preservação da vida. Sob esta ótica, o presente trabalho apresenta o
+	desenvolvimento de um sistema para o monitoramento remoto de sinais
+	vitais de pacientes em atendimento domiciliar à saúde. Foram observadas
+	a frequência cardíaca, a saturação de oxigênio no sangue e a
+	temperatura corporal. Para aquisição desses parâmetros, são utilizados
+	os sensores Max30100 e LM35. Cujos dados foram enviados ao
+	microcontrolador ESP32. Sob o protocolo MQTT estas informações
+	ficarão disponíveis na web. Assim, mesmo à distância, a equipe médica
+	poderá acompanhar os sinais vitais do doente.
+
+Rotinas da Saúde:
+	Monitoramento
