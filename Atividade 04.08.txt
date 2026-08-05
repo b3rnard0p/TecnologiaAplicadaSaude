@@ -12,7 +12,8 @@ Link:
 
 Resumo:
 	Foi feito para monitoramento remoto e contínuo de sinais vitais: temperatura, frequência cardíaca e saturação de oxigênio
-	Foi feito uma pulseira que foi programado em C/C++ para coletar as leituras dos sensores em intervalos regulares e 			transmiti-las via Wi-Fi. Os dados vão par o ThingSpeak, onde mostrava uns gráficos, para os médicos acompanharem.
+	Foi feito uma pulseira que foi programado em C/C++ para coletar as leituras dos sensores em intervalos regulares e
+	transmiti-las via Wi-Fi. Os dados vão par o ThingSpeak, onde mostrava uns gráficos, para os médicos acompanharem.
 
 Rotinas da Saúde:
 	Monitoramento
