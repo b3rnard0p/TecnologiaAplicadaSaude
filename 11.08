@@ -1,0 +1,13 @@
+Predição: Classificação = Categorização = Etiquetação
+Previsão: Séries Temporais = Tempo Continuo = Projeção
+
+Amostra: Individuos, Elementos, Objetos e Cenário
+    Qualidade da Amostra x Quantidade de Amostra
+
+Fases:
+1 - Entender o Problema
+2 - Fontes de Dados
+3 - ETL
+4 - Identificar o melhor modelo
+
+OBS: De mais opções, apoiar é dar opções 
