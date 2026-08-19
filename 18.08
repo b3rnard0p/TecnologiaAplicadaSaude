@@ -1,0 +1,15 @@
+-KDD -> Mineração -> Reconhecimento de Padrões (previsão e predição)
+
+-Modelos treinados
+  .Amostras
+    .Conjuntos (Entrada ("X" ou "features") -> n atributos (caracteristicas) | Saida Esperada "y" ou "target" )
+  .Tipos
+    .Decision Tree - Arvore
+    .Random Forest - Conjunto de Arvores (Compara e encontra a melhor)
+    .K-Nearest Neighbors - Diga com quem tu andas, direi quem tu és
+    .Support Vector Machine - Encontra o melhor limite entre classes (Mesmo que o KNN, mas com menos amostras)
+    .Naive Bayes - Probabilidade (Matemático)
+    .Gradient Boosting - Aprende com erros anteriores
+    .XGBoost, LightGBM e CatBoost - Os mais modernos e poderosos
+
+-Modelos Matemáticos
