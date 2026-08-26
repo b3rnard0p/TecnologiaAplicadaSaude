@@ -1,0 +1,7 @@
+-Formas de medir desempenho do modelo
+  .Métricas
+    .F1 Score
+    .Acurácia
+    .Recall
+  .Graficos
+    .Matriz de Confusão
