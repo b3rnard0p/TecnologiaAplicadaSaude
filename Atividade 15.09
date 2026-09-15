@@ -1,0 +1,53 @@
+.Métricas de Avaliação: Acurácia e F1-Score
+
+  - Acurácia (Accuracy): Representa a proporção geral de acertos do modelo. É calculada dividindo o total de previsões corretas, pelo total de casos avaliados.
+
+    - Quando usar: Funciona bem em bases balanceadas, onde as classes têm quantidades semelhantes.
+
+  - F1-Score: É a média harmônica entre a Precisão e o Recall . O F1-Score penaliza modelos que têm um desempenho muito bom em uma métrica, mas péssimo na outra.
+
+    - Quando usar: É ideal para bases desbalanceadas, pois foca no equilíbrio dos erros na classe minoritária, sem se deixar "enganar" pelo volume da classe majoritária.
+
+  - Qual é a mais adequada para este problema?
+
+  - Para a base de Crédito: 
+    - O F1-Score é a métrica mais adequada. A base é desbalanceada (151 casos na classe 0 e apenas 99 na classe 1). A acurácia pode ser ilusória aqui, pois um modelo que chutasse apenas "0" 
+      já teria uma taxa de acerto razoável, mas falharia completamente no objetivo do negócio (identificar o produto).
+
+  - Para a base de Saúde: 
+    - Ambas as métricas são válidas, mas a Acurácia já fornece uma excelente visão geral, pois a base é perfeitamente balanceada (125 casos na classe 0 e 125 na classe 1).
+
+.Análise de Overfitting e Desempenho (Treino vs. Teste)
+
+  -Análise do Modelo de Crédito (MLP Classifier)
+    - A matriz de confusão avalia 50 amostras de teste (30 da classe 0 e 20 da classe 1).
+
+    - Resultados de Treino: Acurácia de 0.7050 e F1-Score de 0.5775.
+
+    - Resultados de Teste (Matriz): O modelo acertou 31 de 50 amostras (24 verdadeiros negativos + 7 verdadeiros positivos). Isso resulta em uma Acurácia de 62%.
+
+    - Sinais de Overfitting: Há uma queda clara de desempenho do treino (70.5%) para o teste (62%). Além disso, o modelo errou muito na classe 1, gerando 13 Falsos Negativos e acertando apenas 7. 
+      Isso mostra que o modelo não conseguiu generalizar bem os padrões da classe minoritária, indicando dificuldade (e um leve overfitting sobre a classe majoritária) ao lidar com dados não vistos.
+
+  - Análise do Modelo de Saúde (Gaussian Naive Bayes)
+    - A matriz de confusão avalia 50 amostras de teste (25 da classe 0 e 25 da classe 1, refletindo o balanceamento).
+
+    - Resultados de Treino (Tabela): Acurácia de 0.7500 e F1-Score de 0.7451.
+
+    - Resultados de Teste (Matriz): O modelo acertou 39 de 50 amostras (22 verdadeiros negativos + 17 verdadeiros positivos). Isso resulta em uma Acurácia de 78%.
+
+    - Sinais de Overfitting: Não há indícios de overfitting. Pelo contrário, o modelo teve um desempenho ligeiramente superior no conjunto de teste em comparação com o treinamento. 
+      Ele demonstra forte estabilidade e capacidade de manter sua previsibilidade com dados inéditos.
+
+.Sobre o Modelo de Saúde (Naive Bayes):
+
+  - O modelo Naive Bayes treinado com a base de Saúde apresenta excelente capacidade de generalização e está apto para validação em um ambiente de produção. 
+    O treinamento surtiu efeito, o que é provado pela consistência entre as métricas de treino (75% de acurácia) e o excelente desempenho no conjunto de teste (78% de acurácia). 
+    Por se tratar de um dataset perfeitamente balanceado, o modelo conseguiu extrair padrões robustos de ambas as classes (Risco de Internação 0 e 1), demonstrando que não sofreu overfitting.
+
+.Sobre o Modelo de Crédito (MLP Classifier):
+
+  - Por outro lado, o modelo MLP Classifier aplicado à base de Crédito requer cautela e não deve ser levado à produção no seu estado atual. A análise revela sinais de 
+  overfitting e viés em direção à classe majoritária, refletidos na queda da acurácia de 70.5% (treino) para 62% (teste). Mais criticamente, a matriz de confusão demonstrou 
+  que o modelo falha na identificação da classe de interesse (compra de produto), gerando 13 Falsos Negativos em um universo de apenas 20 casos positivos. Para que o 
+  treinamento surta efeito prático, recomendo aplicarmos técnicas de balanceamento de classes (como SMOTE ou class weights) e otimização de hiperparâmetros antes de qualquer implantação.
