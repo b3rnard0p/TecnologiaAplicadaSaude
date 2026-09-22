@@ -50,4 +50,4 @@
   - Por outro lado, o modelo MLP Classifier aplicado à base de Crédito requer cautela e não deve ser levado à produção no seu estado atual. A análise revela sinais de 
   overfitting e viés em direção à classe majoritária, refletidos na queda da acurácia de 70.5% (treino) para 62% (teste). Mais criticamente, a matriz de confusão demonstrou 
   que o modelo falha na identificação da classe de interesse (compra de produto), gerando 13 Falsos Negativos em um universo de apenas 20 casos positivos. Para que o 
-  treinamento surta efeito prático, recomendo aplicarmos técnicas de balanceamento de classes (como SMOTE ou class weights) e otimização de hiperparâmetros antes de qualquer implantação.
+  treinamento surta efeito prático, deve-se balancear classes e otimização de hiperparâmetros.
