@@ -1,0 +1,12 @@
+PyCaret
+  Auto ML
+    Configurações
+    Treinamento
+    Teste
+    Comparações
+      Definir o Melhor Modelo (tuning)
+    Gera executaveis
+
+Preparar Ambiente
+  Normalizar
+    Ir na base original e tirar os fora da curva
