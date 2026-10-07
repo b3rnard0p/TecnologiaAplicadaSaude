@@ -1,0 +1,17 @@
+- Inteligência Artifical
+  - Mineração de Dados
+  - Engenharia de Prompt
+    - Spec - Regras de Negócio
+    - LLM - Cérebro
+      - Geração de Texto por racício
+      - Inteligência Central
+    - RAG - Informação Adicional (Estrutura do BD)
+      - LLM - Conhecimento externo
+      - Usa documentos e bancos de dados (Conhecimento do Negócio)
+    - Agentes de IA
+      - Ações automaticamente
+      - Usa memória e ferramentas
+    - MCP - Sistema Nervoso
+      - Conecta Tudo
+      - Camada base 
+  
