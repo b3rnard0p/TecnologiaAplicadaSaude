@@ -1,4 +1,5 @@
-Sinônimos: Modelo pronto de sinônimo do Hugging Face
+Sinônimos: Modelo pronto de sinônimo do Hugging Face:
+https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
 
 Schema: Ajustar e deixar claro as chaves estrangeiras, limpar campos inúteis(economia de token e evita confusão e sql estranho)
 	Trocar tipo do dado para descrição economiza token e melhora entendimento
