@@ -8,3 +8,7 @@ Schema: Ajustar e deixar claro as chaves estrangeiras, limpar campos inúteis(ec
 	remover campos lixos: slug, senha,....
 
 regras de negocio, estão sendo mandadas? ou a ia adivinha?
+
+
+baixar modelo:
+pip install sentence-transformers
